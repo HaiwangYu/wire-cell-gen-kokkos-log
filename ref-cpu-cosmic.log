@@ -1,0 +1,129 @@
+$time lar -n 1 -c sim.fcl g4-cosmic-1.root 
+The following module labels are either not assigned to any path,
+or they have been assigned to ignored path(s):
+'out', 'plopper'
+%MSG-i MF_INIT_OK:  Early 19-Feb-2021 03:27:26 EST JobSetup
+Messagelogger initialization complete.
+%MSG
+[03:27:27.315] D [  sys   ] loaded plugin #1 "WireCellPgraph" from library "libWireCellPgraph.so": 0x1924800
+[03:27:27.315] D [  sys   ] loaded plugin #2 "WireCellGen" from library "libWireCellGen.so": 0x1934a80
+[03:27:27.331] D [  sys   ] loaded plugin #3 "WireCellGenKokkos" from library "libWireCellGenKokkos.so": 0x19d4550
+[03:27:27.336] D [  sys   ] loaded plugin #4 "WireCellSio" from library "libWireCellSio.so": 0x19d6010
+[03:27:27.499] D [  sys   ] loaded plugin #5 "WireCellRoot" from library "libWireCellRoot.so": 0x1a12fa0
+[03:27:27.561] D [  sys   ] loaded plugin #6 "WireCellLarsoft" from library "libWireCellLarsoft.so": 0x1a486c0
+[03:27:27.568] D [  sys   ] loaded plugin #7 "WireCellTbb" from library "libWireCellTbb.so": 0x1a49310
+[03:27:27.575] D [  sys   ] loaded plugin #8 "WireCellImg" from library "libWireCellImg.so": 0x1a49d90
+[03:27:27.591] D [  sys   ] loaded plugin #9 "WireCellHio" from library "libWireCellHio.so": 0x1a8e760
+Kokkos::initializing
+Kokkos::initialized
+[03:27:27.597] D [  sim   ] Drifter: time offset: 0 ms, drift speed: 1.6 mm/us
+[03:27:27.597] I [  wct   ] loading compressed json file: /home/yuhw/wc/wct-analysis/csi-kokkos/wire-cell-data/protodune-wires-larsoft-v4.json.bz2
+[03:27:29.852] D [  geom  ] AnodePlane: X planes: "cathode"@ -0.0254m, "response"@-3.49414m, "anode"@-3.57985m
+[03:27:29.855] D [  geom  ] AnodePlane: face:0, plane:0, origin:(-3494.14 3071.4 1153.36) mm
+[03:27:29.858] D [  geom  ] AnodePlane: face:0, plane:1, origin:(-3494.14 3069.73 1153.36) mm
+[03:27:29.859] D [  geom  ] AnodePlane: face:0, plane:2, origin:(-3494.14 3068.05 1153.29) mm
+[03:27:29.860] D [  geom  ] AnodePlane: face:0 with 3 planes and sensvol: [(-3579.85 76.1 3.35) --> (-25.4 6060 2303.37)]
+[03:27:29.860] D [  geom  ] anode 0 face 1 is not sensitive
+[03:27:29.860] D [  geom  ] AnodePlane: X planes: "cathode"@ 0m, "response"@0m, "anode"@0m
+[03:27:29.862] D [  geom  ] AnodePlane: face:1, plane:0, origin:(0 3071.4 1153.36) mm
+[03:27:29.866] D [  geom  ] AnodePlane: face:1, plane:1, origin:(0 3069.73 1153.36) mm
+[03:27:29.867] D [  geom  ] AnodePlane: face:1, plane:2, origin:(0 3068.05 1153.44) mm
+[03:27:29.867] D [  geom  ] AnodePlane: face:1 with 3 planes and sensvol: [(0 0 0) --> (0 0 0)]
+[03:27:29.868] I [  wct   ] loading compressed json file: /home/yuhw/wc/wct-analysis/csi-kokkos/wire-cell-data/garfield-1d-boundary-path-rev-dune.json.bz2
+[03:27:31.047] D [  geom  ] PIR: short response ElecResponse has different number of samples (6125) than expected (200)
+[03:27:31.049] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[03:27:31.054] D [  geom  ] PIR: short response ElecResponse has different number of samples (6125) than expected (200)
+[03:27:31.054] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[03:27:31.056] D [  geom  ] PIR: short response ElecResponse has different number of samples (6125) than expected (200)
+[03:27:31.056] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[03:27:31.058] D [  sim   ] Gen::Reframer: using anode: "AnodePlane:apa0"
+[03:27:31.058] D [  sim   ] EmpiricalNoiseModel: using anode AnodePlane:apa0, chanstat 
+[03:27:31.058] I [  wct   ] loading compressed json file: /home/yuhw/wc/wct-analysis/csi-kokkos/wire-cell-data/protodune-noise-spectra-v1.json.bz2
+[03:27:31.063] D [  sim   ] AddNoise: using IRandom: "Random", IChannelSpectrum: "EmpiricalNoiseModel:empericalnoise-apa0"
+[03:27:31.063] D [  sim   ] Gen::Digitizer: tag="orig0", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[200,1600] mV, baselines=[1003,1003,508] mV
+[03:27:31.068] D [ pgraph ] connecting: 10 edges
+Inputer: "wclsSimDepoSource:"
+19-Feb-2021 03:27:31 EST  Initiating request to open input file "g4-cosmic-1.root"
+19-Feb-2021 03:27:31 EST  Opened input file "g4-cosmic-1.root"
+Begin processing the 1st record. run: 1 subRun: 0 event: 1 at 19-Feb-2021 03:27:31 EST
+SimDepoSource got 578267 depos from art tag "InputTag:  label = IonAndScint, instance = " returns: okay
+SimDepoSource: ready with 578267 depos spanning: [-3257.21, 2995.78]us
+[03:27:32.422] D [ pgraph ] executing with 11 nodes
+[03:27:53.333] D [  sim   ] xregion: anode: -3579.85 mm, response: -3494.14 mm, cathode: -25.4 mm, flushing 36809
+[03:27:53.341] D [  sim   ] xregion: anode: 0 mm, response: 0 mm, cathode: 0 mm, flushing 0
+[03:27:53.341] D [  sim   ] xregion: anode: 3579.85 mm, response: 3494.14 mm, cathode: 25.4 mm, flushing 64866
+[03:27:53.392] D [  sim   ] at EOS, dropped 3144 / 578267 depos from stream, outside of all 3 drift regions
+[03:27:55.303] D [  sim   ] anode: 0, face: 0, processing 45073 depos spanning t:[-0.31249,2.74997]ms, bb:[(-357.985 7.61 0.335)-->(-2.54 606 230.337)]cm
+[03:27:55.303] D [  sim   ] anode: 0, face: 0, dropped 204940 depos spanning t:[-0.312484,2.75]ms, outside bb:[(-357.985 7.61 0.335)-->(-2.54 606 230.337)]cm
+get_charge_vec() : get_charge_vec() part1 running time : 5.39469e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.00311545
+get_charge_vec() : get_charge_vec() part3 running time : 0.837115
+get_charge_vec() : set_sampling() running time : 0.204241, counter : 45073
+get_charge_vec() : m_fluctuate : 0x1b111d0
+get_charge_vec() : set_sampling() part1 time : 0.089131, part2 time : 0.0754655, part3 time : 0.0317399
+[03:27:56.179] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 0.843584
+[03:27:59.311] D [  sim   ] ImpactTransform: # of channels: 1280 # of ticks: 6655
+get_charge_vec() : get_charge_vec() part1 running time : 5.81322e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.00604944
+get_charge_vec() : get_charge_vec() part3 running time : 1.54383
+get_charge_vec() : set_sampling() running time : 0.398659, counter : 45073
+get_charge_vec() : m_fluctuate : 0x1b111d0
+get_charge_vec() : set_sampling() part1 time : 0.182274, part2 time : 0.134926, part3 time : 0.0651546
+[03:28:00.529] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 1.55608
+[03:28:03.364] D [  sim   ] ImpactTransform: # of channels: 1120 # of ticks: 6655
+get_charge_vec() : get_charge_vec() part1 running time : 6.14813e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.00733495
+get_charge_vec() : get_charge_vec() part3 running time : 2.21649
+get_charge_vec() : set_sampling() running time : 0.583181, counter : 45073
+get_charge_vec() : m_fluctuate : 0x1b111d0
+get_charge_vec() : set_sampling() part1 time : 0.269318, part2 time : 0.192014, part3 time : 0.0975247
+[03:28:04.527] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 2.23128
+[03:28:05.695] D [  sim   ] ImpactTransform: # of channels: 512 # of ticks: 6655
+[03:28:05.925] D [  sim   ] anode 0 face 1 is marked insensitive, skipping
+[03:28:06.061] D [  sim   ] Gen::Reframer: frame 100 2560 traces, 6000 ticks
+========== KokkosTestFrameFilter: start ==========
+  Computed result for 4096 x 1024 is 4194304.000000
+  N( 4096 ) M( 1024 ) nrepeat ( 100 ) problem( 33.5954 MB ) time( 0.0987832 s ) bandwidth( 34.0092 GB/s )
+========== KokkosTestFrameFilter: end ==========
+[03:28:06.810] D [   io   ] AnodePlane:apa0: t: 0 - 5999; c: 0 - 2559
+[03:28:06.810] D [   io   ] HDF5FrameTap: chunking ncols=0 nrows=0
+[03:28:06.810] D [   io   ] HDF5FrameTap: gzip_level 2
+[03:28:06.810] D [   io   ] HDF5FrameTap: see frame #100 with 2560 traces with frame tags: "orig0" and trace tags: looking for tags: "orig0"
+[03:28:06.810] D [   io   ] HDF5FrameTap: save 2560 tagged as orig0
+[03:28:06.810] D [   io   ] HDF5FrameTap: saving ncols=6000 nrows=2560
+[03:28:06.811] D [   io   ] HDF5FrameTap: chunking ncols=6000 nrows=2560
+[03:28:08.586] D [   io   ] HDF5FrameTap: saved /0/frame_orig0 with 2560 channels 6000 ticks @t=-0.25 ms qtot=2.76307e+10
+[03:28:08.589] D [  glue  ] sink frame: #100 @-0.25 with 2560 traces, frame tags:[orig0], trace tags:[]
+[03:28:08.589] D [  sim   ] Gen::Digitizer: EOS
+[03:28:08.589] D [   io   ] HDF5FrameTap: EOS
+[03:28:08.589] D [  glue  ] frame sink sees EOS
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::DepoTransform : 11.69 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Hdf5::HDF5FrameTap : 3.01 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::GenKokkos::KokkosTestFrameFilter : 2.6 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::Drifter : 1.94 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::AddNoise : 1.44 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::Digitizer : 1.38 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::Reframer : 1.33 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::DepoBagger : 1.24 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::DumpFrames : 1.23 sec
+[03:28:08.589] I [ timer  ] Timer: WireCell::Gen::DepoFanout : 1.1 sec
+[03:28:08.589] I [ timer  ] Timer: wcls::SimDepoSource : 0.33 sec
+[03:28:08.589] I [ timer  ] Timer: Total node execution : 27.29 sec
+19-Feb-2021 03:28:08 EST  Closed input file "g4-cosmic-1.root"
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 1 passed = 1 failed = 0
+
+TimeReport ---------- Time  Summary ---[sec]----
+TimeReport CPU = 38.459293 Real = 36.928893
+
+MemReport  ---------- Memory  Summary ---[base-10 MB]----
+MemReport  VmPeak = 1457.68 VmHWM = 972.337
+
+Kokkos::finalizing
+Kokkos::finalized
+Art has completed and will exit with status 0.
+
+real    0m42.142s
+user    0m31.926s
+sys 0m12.165s
