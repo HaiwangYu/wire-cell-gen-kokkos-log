@@ -1,0 +1,178 @@
+bash-4.2$ time nvprof lar -n 1 -c sim.fcl cosmic-1/g4.root 
+The following module labels are either not assigned to any path,
+or they have been assigned to ignored path(s):
+'out', 'plopper'
+%MSG-i MF_INIT_OK:  Early 21-Feb-2021 23:00:05 PST JobSetup
+Messagelogger initialization complete.
+%MSG
+[23:00:07.197] D [  sys   ] loaded plugin #1 "WireCellPgraph" from library "libWireCellPgraph.so": 0x7c1fe0
+[23:00:07.197] D [  sys   ] loaded plugin #2 "WireCellGen" from library "libWireCellGen.so": 0x7cd600
+[23:00:07.214] D [  sys   ] loaded plugin #3 "WireCellGenKokkos" from library "libWireCellGenKokkos.so": 0x7aec30
+[23:00:07.231] D [  sys   ] loaded plugin #4 "WireCellSio" from library "libWireCellSio.so": 0x7cd5c0
+[23:00:07.569] D [  sys   ] loaded plugin #5 "WireCellRoot" from library "libWireCellRoot.so": 0x83dee0
+[23:00:07.782] D [  sys   ] loaded plugin #6 "WireCellLarsoft" from library "libWireCellLarsoft.so": 0x8739f0
+[23:00:07.809] D [  sys   ] loaded plugin #7 "WireCellTbb" from library "libWireCellTbb.so": 0x874220
+[23:00:07.835] D [  sys   ] loaded plugin #8 "WireCellImg" from library "libWireCellImg.so": 0x874cb0
+[23:00:07.953] D [  sys   ] loaded plugin #9 "WireCellHio" from library "libWireCellHio.so": 0x786170
+Kokkos::initializing
+==37832== NVPROF is profiling process 37832, command: lar -n 1 -c sim.fcl cosmic-1/g4.root
+Kokkos::initialized
+[23:00:08.489] D [  sim   ] Drifter: time offset: 0.0 ms, drift speed: 1.6 mm/us
+[23:00:08.489] I [  wct   ] loading compressed json file: /opt/wire-cell-data/protodune-wires-larsoft-v4.json.bz2
+[23:00:11.058] D [  geom  ] AnodePlane: X planes: "cathode"@ -0.025400000000000093m, "response"@-3.4941375m, "anode"@-3.57985m
+[23:00:11.062] D [  geom  ] AnodePlane: face:0, plane:0, origin:true mm
+[23:00:11.065] D [  geom  ] AnodePlane: face:0, plane:1, origin:true mm
+[23:00:11.067] D [  geom  ] AnodePlane: face:0, plane:2, origin:true mm
+[23:00:11.067] D [  geom  ] AnodePlane: face:0 with 3 planes and sensvol: [(-3579.85 76.1 3.35) --> (-25.4 6060 2303.37)]
+[23:00:11.067] D [  geom  ] anode 0 face 1 is not sensitive
+[23:00:11.067] D [  geom  ] AnodePlane: X planes: "cathode"@ 0.0m, "response"@0.0m, "anode"@0.0m
+[23:00:11.070] D [  geom  ] AnodePlane: face:1, plane:0, origin:true mm
+[23:00:11.073] D [  geom  ] AnodePlane: face:1, plane:1, origin:true mm
+[23:00:11.074] D [  geom  ] AnodePlane: face:1, plane:2, origin:true mm
+[23:00:11.074] D [  geom  ] AnodePlane: face:1 with 3 planes and sensvol: [(0 0 0) --> (0 0 0)]
+[23:00:11.075] I [  wct   ] loading compressed json file: /opt/wire-cell-data/dune-garfield-1d565.json.bz2
+[23:00:12.399] D [  geom  ] PIR: short response ColdElecResponse has different number of samples (6125) than expected (200)
+[23:00:12.401] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[23:00:12.406] D [  geom  ] PIR: short response ColdElecResponse has different number of samples (6125) than expected (200)
+[23:00:12.406] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[23:00:12.408] D [  geom  ] PIR: short response ColdElecResponse has different number of samples (6125) than expected (200)
+[23:00:12.408] D [  geom  ] PIR: long response RCResponse has different number of samples (6125) than expected (6174)
+[23:00:12.411] D [  sim   ] Gen::Reframer: using anode: "AnodePlane:apa0"
+[23:00:12.411] D [  sim   ] EmpiricalNoiseModel: using anode AnodePlane:apa0, chanstat 
+[23:00:12.411] I [  wct   ] loading compressed json file: /opt/wire-cell-data/protodune-noise-spectra-v1.json.bz2
+[23:00:12.417] D [  sim   ] AddNoise: using IRandom: "Random", IChannelSpectrum: "EmpiricalNoiseModel:empericalnoise-apa0"
+[23:00:12.417] D [  sim   ] Gen::Digitizer: tag="orig0", resolution=12 bits, maxvalue=4096 counts, gain=1, fullscale=[200,1600] mV, baselines=[1003,1003,508] mV
+[23:00:12.435] D [ pgraph ] connecting: 10 edges
+Inputer: "wclsSimDepoSource:"
+21-Feb-2021 23:00:14 PST  Initiating request to open input file "cosmic-1/g4.root"
+21-Feb-2021 23:00:15 PST  Opened input file "cosmic-1/g4.root"
+Begin processing the 1st record. run: 1 subRun: 0 event: 1 at 21-Feb-2021 23:00:15 PST
+SimDepoSource got 578267 depos from art tag "InputTag:  label = IonAndScint, instance = " returns: okay
+SimDepoSource: ready with 578267 depos spanning: [-3257.21, 2995.78]us
+[23:00:16.470] D [ pgraph ] executing with 11 nodes
+[23:00:50.088] D [  sim   ] xregion: anode: -3579.85 mm, response: -3494.1375 mm, cathode: -25.40000000000009 mm, flushing 36809
+[23:00:50.102] D [  sim   ] xregion: anode: 0.0 mm, response: 0.0 mm, cathode: 0.0 mm, flushing 0
+[23:00:50.102] D [  sim   ] xregion: anode: 3579.85 mm, response: 3494.1375 mm, cathode: 25.40000000000009 mm, flushing 64866
+[23:00:50.150] D [  sim   ] at EOS, dropped 3144 / 578267 depos from stream, outside of all 3 drift regions
+[23:00:53.335] D [  sim   ] anode: 0, face: 0, processing 45073 depos spanning t:[-0.31249048966653553,2.749972357227511]ms, bb:[(-357.985 7.61 0.335)-->(-2.54 606 230.337)]cm
+[23:00:53.335] D [  sim   ] anode: 0, face: 0, dropped 204940 depos spanning t:[-0.312483845727663,2.7499986339248395]ms, outside bb:[(-357.985 7.61 0.335)-->(-2.54 606 230.337)]cm
+get_charge_vec() : get_charge_vec() part1 running time : 2.5282e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.00368928
+get_charge_vec() : get_charge_vec() part3 running time : 6.05475
+get_charge_vec() : set_sampling() running time : 5.05997, counter : 45073
+get_charge_vec() : m_fluctuate : 0x3bd9ad0
+get_charge_vec() : set_sampling() part1 time : 0.109449, part2 time : 2.26273, part3 time : 2.65539
+[23:01:01.023] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 6.06360135198338
+[23:01:08.763] D [  sim   ] ImpactTransform: # of channels: 1280 # of ticks: 6655
+get_charge_vec() : get_charge_vec() part1 running time : 3.12079e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.00734018
+get_charge_vec() : get_charge_vec() part3 running time : 11.1931
+get_charge_vec() : set_sampling() running time : 9.31764, counter : 45073
+get_charge_vec() : m_fluctuate : 0x3bd9ad0
+get_charge_vec() : set_sampling() part1 time : 0.220895, part2 time : 4.23482, part3 time : 4.81296
+[23:01:16.174] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 11.210812421981245
+[23:01:22.752] D [  sim   ] ImpactTransform: # of channels: 1120 # of ticks: 6655
+get_charge_vec() : get_charge_vec() part1 running time : 3.68499e-05
+get_charge_vec() : get_charge_vec() part2 running time : 0.0088003
+get_charge_vec() : get_charge_vec() part3 running time : 16.3234
+get_charge_vec() : set_sampling() running time : 13.6046, counter : 45073
+get_charge_vec() : m_fluctuate : 0x3bd9ad0
+get_charge_vec() : set_sampling() part1 time : 0.328647, part2 time : 6.198, part3 time : 7.01263
+[23:01:31.675] D [  sim   ] ImpactTransform::ImpactTransform() : get_charge_vec() Total running time : 16.34550442395266
+[23:01:33.844] D [  sim   ] ImpactTransform: # of channels: 512 # of ticks: 6655
+[23:01:34.558] D [  sim   ] anode 0 face 1 is marked insensitive, skipping
+[23:01:34.821] D [  sim   ] Gen::Reframer: frame 100 2560 traces, 6000 ticks
+========== KokkosTestFrameFilter: start ==========
+  Computed result for 4096 x 1024 is 4194304.000000
+  N( 4096 ) M( 1024 ) nrepeat ( 100 ) problem( 33.5954 MB ) time( 0.053796 s ) bandwidth( 62.4496 GB/s )
+========== KokkosTestFrameFilter: end ==========
+[23:01:36.388] D [   io   ] AnodePlane:apa0: t: 0 - 5999; c: 0 - 2559
+[23:01:36.388] D [   io   ] HDF5FrameTap: chunking ncols=0 nrows=0
+[23:01:36.388] D [   io   ] HDF5FrameTap: gzip_level 2
+[23:01:36.388] D [   io   ] HDF5FrameTap: see frame #100 with 2560 traces with frame tags: "orig0" and trace tags: looking for tags: "orig0"
+[23:01:36.389] D [   io   ] HDF5FrameTap: save 2560 tagged as orig0
+[23:01:36.389] D [   io   ] HDF5FrameTap: saving ncols=6000 nrows=2560
+[23:01:36.389] D [   io   ] HDF5FrameTap: chunking ncols=6000 nrows=2560
+[23:01:40.217] D [   io   ] HDF5FrameTap: saved /100/frame_orig0 with 2560 channels 6000 ticks @t=-0.25 ms qtot=27668079000.0
+[23:01:40.232] D [  glue  ] sink frame: #100 @-0.25 with 2560 traces, frame tags:[orig0], trace tags:[]
+[23:01:40.234] D [  sim   ] Gen::Digitizer: EOS
+[23:01:40.234] D [   io   ] HDF5FrameTap: EOS
+[23:01:40.234] D [  glue  ] frame sink sees EOS
+[23:01:40.234] I [ timer  ] Timer: WireCell::GenKokkos::DepoTransform : 46.73 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Hio::HDF5FrameTap : 5.039999 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::Drifter : 3.739997 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::DepoBagger : 2.7699978 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::DepoFanout : 2.609998 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::Digitizer : 2.1399992 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::AddNoise : 2.009999 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::Reframer : 1.529999 sec
+[23:01:40.234] I [ timer  ] Timer: wcls::SimDepoSource : 1.5299989 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::GenKokkos::KokkosTestFrameFilter : 1.4199991 sec
+[23:01:40.234] I [ timer  ] Timer: WireCell::Gen::DumpFrames : 1.1699992 sec
+[23:01:40.234] I [ timer  ] Timer: Total node execution : 70.68998575210571 sec
+21-Feb-2021 23:01:40 PST  Closed input file "cosmic-1/g4.root"
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 1 passed = 1 failed = 0
+
+TimeReport ---------- Time  Summary ---[sec]----
+TimeReport CPU = 88.557958 Real = 84.876127
+
+MemReport  ---------- Memory  Summary ---[base-10 MB]----
+MemReport  VmPeak = 15291.5 VmHWM = 5729.19
+
+Kokkos::finalizing
+Kokkos::finalized
+Art has completed and will exit with status 0.
+==37832== Profiling application: lar -n 1 -c sim.fcl cosmic-1/g4.root
+==37832== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   21.37%  696.82ms    135219  5.1530us  4.9280us  18.176us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelReduce<kokkos_patching_functor, Kokkos::RangePolicy<>, Kokkos::InvalidType, Kokkos::Cuda>>(kokkos_patching_functor)
+                   21.35%  696.34ms    135219  5.1490us  4.9280us  18.272us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelReduce<kokkos_sampling_functor, Kokkos::RangePolicy<>, Kokkos::InvalidType, Kokkos::Cuda>>(kokkos_sampling_functor)
+                   20.87%  680.53ms         3  226.84ms  224.81ms  228.79ms  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<generate_random<Kokkos::Random_XorShift64_Pool<Kokkos::Cuda>>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+                    7.31%  238.52ms    135219  1.7630us  1.6000us  13.568us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<kokkos_sampling_functor, Kokkos::MDRangePolicy<>, Kokkos::Cuda>>(kokkos_sampling_functor)
+                    6.09%  198.67ms    135271  1.4680us  1.3760us  5.2800us  [CUDA memcpy DtoH]
+                    5.79%  188.74ms    135266  1.3950us  1.2480us  6.5402ms  [CUDA memcpy HtoD]
+                    5.30%  172.74ms    135219  1.2770us  1.1510us  13.760us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<kokkos_patching_functor, Kokkos::MDRangePolicy<>, Kokkos::Cuda>>(kokkos_patching_functor)
+                    5.21%  169.79ms    135219  1.2550us  1.1190us  13.696us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<kokkos_sampling_functor, Kokkos::RangePolicy<>, Kokkos::Cuda>>(kokkos_sampling_functor)
+                    4.87%  158.77ms    135219  1.1740us  1.0550us  13.760us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<kokkos_patching_functor, Kokkos::RangePolicy<>, Kokkos::Cuda>>(kokkos_patching_functor)
+                    1.21%  39.402ms         9  4.3780ms  1.0560us  13.730ms  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<Kokkos::Impl::ViewValueFunctor<Kokkos::Cuda, double, bool=1>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+                    0.63%  20.602ms       100  206.02us  203.17us  214.17us  _ZN6Kokkos4Impl33cuda_parallel_launch_local_memoryINS0_14ParallelReduceINS0_18CudaFunctorAdapterIZN8WireCell9GenKokkos21KokkosTestFrameFilterclERKSt10shared_ptrIKNS4_6IFrameEERSA_EUliRdE_NS_11RangePolicyIJNS_4CudaEEEEdvEESI_NS_11InvalidTypeESH_EEEEvT_
+                    0.00%  77.342us         3  25.780us  23.423us  27.007us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<Kokkos::Impl::ViewValueFunctor<Kokkos::Cuda, float, bool=1>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+                    0.00%  32.063us         6  5.3430us  4.8000us  5.7270us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<Kokkos::Impl::ViewValueFunctor<Kokkos::Cuda, unsigned long, bool=1>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+                    0.00%  31.520us         6  5.2530us  4.7040us  5.6640us  void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<Kokkos::Impl::ViewValueFunctor<Kokkos::Cuda, int, bool=1>, Kokkos::RangePolicy<>, Kokkos::Cuda>>(Kokkos::Cuda)
+                    0.00%  3.5520us         2  1.7760us  1.7600us  1.7920us  [CUDA memset]
+                    0.00%  2.4960us         1  2.4960us  2.4960us  2.4960us  Kokkos::_GLOBAL__N__52_tmpxft_00000440_00000000_7_Kokkos_Cuda_Locks_cpp1_ii_915ea793::init_lock_array_kernel_threadid(int)
+                    0.00%  2.2720us         1  2.2720us  2.2720us  2.2720us  Kokkos::_GLOBAL__N__52_tmpxft_00000440_00000000_7_Kokkos_Cuda_Locks_cpp1_ii_915ea793::init_lock_array_kernel_atomic(void)
+                    0.00%  1.5680us         1  1.5680us  1.5680us  1.5680us  Kokkos::Impl::_GLOBAL__N__55_tmpxft_00000425_00000000_7_Kokkos_Cuda_Instance_cpp1_ii_a8bc5097::query_cuda_kernel_arch(int*)
+      API calls:   31.63%  4.15488s    811444  5.1200us  4.0110us  32.287ms  cudaLaunchKernel
+                   23.69%  3.11194s    541100  5.7510us  1.5660us  24.988ms  cudaStreamSynchronize
+                   21.38%  2.80912s    270533  10.383us  3.5930us  55.749ms  cudaMemcpy
+                   17.54%  2.30440s    540909  4.2600us  1.0460us  253.82ms  cudaDeviceSynchronize
+                    5.35%  703.37ms        30  23.446ms  4.2670us  233.52ms  cudaFree
+                    0.38%  50.370ms        30  1.6790ms  2.6480us  18.589ms  cudaMalloc
+                    0.01%  935.80us         1  935.80us  935.80us  935.80us  cudaHostAlloc
+                    0.01%  756.14us       101  7.4860us     131ns  337.93us  cuDeviceGetAttribute
+                    0.01%  736.81us         1  736.81us  736.81us  736.81us  cudaGetDeviceProperties
+                    0.00%  394.48us         2  197.24us  15.914us  378.57us  cudaFreeHost
+                    0.00%  332.50us         1  332.50us  332.50us  332.50us  cuDeviceTotalMem
+                    0.00%  88.963us         1  88.963us  88.963us  88.963us  cuDeviceGetName
+                    0.00%  67.762us        13  5.2120us  2.9350us  12.875us  cudaFuncGetAttributes
+                    0.00%  62.688us         4  15.672us  7.3410us  20.357us  cudaMemcpyToSymbol
+                    0.00%  35.341us        24  1.4720us     895ns  2.3220us  cudaPointerGetAttributes
+                    0.00%  27.414us        12  2.2840us     936ns  5.4390us  cudaFuncSetCacheConfig
+                    0.00%  22.773us         2  11.386us  6.8840us  15.889us  cudaMemset
+                    0.00%  7.2010us         1  7.2010us  7.2010us  7.2010us  cudaMallocHost
+                    0.00%  3.5940us         1  3.5940us  3.5940us  3.5940us  cudaSetDevice
+                    0.00%  3.1240us         1  3.1240us  3.1240us  3.1240us  cudaEventDestroy
+                    0.00%  2.8600us         1  2.8600us  2.8600us  2.8600us  cudaGetDeviceCount
+                    0.00%  2.3500us         1  2.3500us  2.3500us  2.3500us  cuDeviceGetPCIBusId
+                    0.00%  2.0740us         1  2.0740us  2.0740us  2.0740us  cudaEventCreate
+                    0.00%  1.4820us         3     494ns     183ns  1.0640us  cuDeviceGetCount
+                    0.00%     917ns         1     917ns     917ns     917ns  cudaDeviceSetCacheConfig
+                    0.00%     804ns         2     402ns     169ns     635ns  cuDeviceGet
+                    0.00%     282ns         1     282ns     282ns     282ns  cuDeviceGetUuid
+
+real	1m40.322s
+user	1m14.699s
+sys	0m26.855s
